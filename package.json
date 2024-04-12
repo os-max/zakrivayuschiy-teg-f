@@ -1,0 +1,32 @@
+{
+  "name": "zakrivayuschiy-teg",
+  "version": "1.0.0",
+  "description": "Проектная работа \"Закрывающий тег\"",
+  "main": "./scripts/script.js",
+  "scripts": {
+    "test": "echo \"Oh hi!\"",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint **/*.css --fix",
+    "checkAll": "npm run check && npm run lint",
+    "fixAll": "npm run lintfix && npm run format"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/os-max/zakrivayuschiy-teg-f.git"
+  },
+  "keywords": [
+    "Practicum"
+  ],
+  "author": "М. Осипов",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/os-max/zakrivayuschiy-teg-f/issues"
+  },
+  "homepage": "https://github.com/os-max/zakrivayuschiy-teg-f#readme",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "stylelint": "^16.2.1"
+  }
+}
