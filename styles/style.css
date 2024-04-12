@@ -58,7 +58,7 @@
   padding-bottom: 20px;
   font-size: clamp(3.0625rem, 2.7154rem + 1.4967vw, 4.0625rem);
   font-style: normal;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -66,7 +66,7 @@
 .header__text {
   padding-bottom: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .theme-menu__item {
-  line-height: 100%;
+  line-height: 1;
 }
 
 .theme-menu__item:not(:last-child) {
@@ -90,7 +90,7 @@
   position: relative;
   border: none;
   padding: 0;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
   background-color: transparent;
   transition: opacity 0.3s;
@@ -356,7 +356,7 @@
   color: var(--button-color);
   font-family: "PressStart2P-Regular", fantasy, sans-serif;
   font-size: 14px;
-  line-height: 12.6px;
+  line-height: 0.9;
   mix-blend-mode: difference;
 }
 
@@ -483,7 +483,7 @@
   grid-area: text;
   font-family: "PressStart2P-Regular", fantasy, sans-serif;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 1.5;
 }
 
 .dialog__button {
