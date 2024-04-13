@@ -16,7 +16,7 @@
 
 .page {
   color: var(--main-color);
-  font-family: Inter-Variable, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 18px;
   line-height: 21px;
   background-color: var(--gradient-grid-color);
@@ -39,6 +39,7 @@
       var(--gradient-flow-color-to)
     );
   background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: "wght" var(--main-font-weight);
@@ -48,26 +49,28 @@
   margin: 100px auto;
   border: 2px var(--main-color) solid;
   padding: clamp(120px, 9.5vi, 136px) 14px 25px;
-  font-family: "PressStart2P-Regular", fantasy, sans-serif;
+  font-family: "PressStart2P", fantasy;
   text-align: center;
   background-color: var(--main-block-background-color);
   inline-size: clamp(375px, 30.516vw + 260.56px, 700px);
 }
 
-.header__title {
-  padding-bottom: 20px;
+.header__logo {
   font-size: clamp(3.0625rem, 2.7154rem + 1.4967vw, 4.0625rem);
   font-style: normal;
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
+  text-decoration: none;
 }
 
-.header__text {
-  padding-bottom: 25px;
+.header__title {
+  padding-block-start: 20px;
+  padding-block-end: 25px;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   line-height: 1;
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 .theme-menu__list {
@@ -128,7 +131,6 @@
 
 .theme-menu__button:hover {
   opacity: 0.6;
-  cursor: pointer;
 }
 
 .theme-menu__button[disabled] {
@@ -150,11 +152,11 @@
   justify-content: center;
 }
 
-.main__card {
+.card {
   background-color: var(--main-block-background-color);
 }
 
-.main__card__title {
+.card__title {
   border: 2px solid var(--main-color);
   padding: 4px 10px;
   font-size: 18px;
@@ -162,13 +164,13 @@
   font-variation-settings: "wght" var(--title-font-weight);
 }
 
-.main__card__image-wrapper {
+.card__image-wrapper {
   position: relative;
   border-right: 2px solid var(--main-color);
   border-left: 2px solid var(--main-color);
 }
 
-.main__card__image {
+.card__image {
   display: block;
   inline-size: 100%;
   object-fit: cover;
@@ -209,13 +211,13 @@
   filter: hue-rotate(1350deg);
 }
 
-.main__card__image-caption {
+.card__image-caption {
   position: absolute;
   inset-block-start: 25px;
   inset-inline-end: clamp(13px, 3.692vi - 0.848px, 25px);
   opacity: 0.5;
   color: var(--main-color);
-  font-family: "PressStart2P-Regular", fantasy, sans-serif;
+  font-family: "PressStart2P", fantasy;
   font-size: 14px;
   line-height: 1;
   text-shadow:
@@ -228,34 +230,31 @@
 
 @supports (-webkit-text-stroke: 1px white) {
 
-  .main__card__image-caption {
+  .card__image-caption {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--text-shadow-color);
   }
 }
 
-.main__card__content {
+.card__content {
   display: grid;
   border: 2px solid var(--main-color);
   padding: 25px;
 }
 
-.card__content__article {
+.card__article {
   display: grid;
   gap: 27px;
   padding-bottom: 25px;
 }
 
-.like-buttons {
+.card__like-buttons {
   justify-self: end;
   align-self: last baseline;
 }
 
 .like-button {
   vertical-align: middle;
-}
-
-.like-button:hover {
   cursor: pointer;
 }
 
@@ -281,26 +280,27 @@
   transition: border 0.3s;
 }
 
-.card__like-button {
+.button {
   position: relative;
   inline-size: 130px;
   block-size: 38px;
   border: 2px solid var(--main-color);
   background-color: transparent;
   transition: box-shadow 0.3s;
+  cursor: pointer;
 }
 
 .button__text {
   position: relative;
   z-index: 1;
   color: var(--button-color);
-  font-family: "PressStart2P-Regular", fantasy, sans-serif;
+  font-family: "PressStart2P", fantasy;
   font-size: 14px;
   line-height: 0.9;
   mix-blend-mode: difference;
 }
 
-.card__like-button::after {
+.button::after {
   content: "";
   position: absolute;
   inset-block-start: 0;
@@ -313,53 +313,34 @@
   block-size: 100%;
 }
 
-.card__like-button:hover::after {
+.button:hover::after {
   transform: scaleX(1);
 }
 
-.card__like-button:focus {
+.button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px var(--main-color);
   outline: none;
 }
 
-.main__save-section {
+.save-section {
   padding: 0 34.5px 100px;
 }
 
 .save-section__button {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 8px;
   inline-size: clamp(310px, 24vw, 339px);
+  block-size: unset;
   margin: 0 auto;
-  border: 2px solid var(--main-color);
   padding: 15px 21px 15px 19px;
   background-color: var(--main-block-background-color);
-  transition: box-shadow 0.3s;
-}
-
-.save-section__button::after {
-  content: "";
-  position: absolute;
-  inset-block-start: 0;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  block-size: 100%;
-  background-color: var(--main-color);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: 0;
-}
-
-.save-section__button:hover {
-  cursor: pointer;
 }
 
 .save-section__button:hover::after {
@@ -375,7 +356,7 @@
   outline: none;
 }
 
-.save-section__button__floppy {
+.save-section__floppy {
   z-index: 1;
   color: var(--button-color);
   inline-size: clamp(21px, 30.45px - 0.657vw, 28px);
@@ -388,7 +369,7 @@
   white-space: nowrap;
 }
 
-.floppy-dialog::backdrop {
+.dialog::backdrop {
   opacity: 0.75;
   background-color: var(--backdrop-color);
 }
@@ -400,7 +381,7 @@
   overflow: hidden;
 } */
 
-.floppy-dialog[open] {
+.dialog[open] {
   display: grid;
   grid-template-columns: 39px 198px;
   grid-template-rows: 1fr 38px;
@@ -413,17 +394,18 @@
   background-color: var(--main-block-background-color);
 }
 
-.floppy-dialog__floppy {
+.dialog__floppy {
   grid-area: floppy;
   inline-size: 39px;
   block-size: 39px;
 }
 
-.floppy-dialog__text {
+.dialog__text {
   grid-area: text;
-  font-family: "PressStart2P-Regular", fantasy, sans-serif;
+  font-family: "PressStart2P", fantasy;
   font-size: 14px;
   line-height: 1.5;
+  text-transform: uppercase;
 }
 
 .dialog__form {
@@ -435,6 +417,6 @@
   block-size: 100%;
 }
 
-.dialog__button-text {
+.button__text-uppercase {
   text-transform: uppercase;
 }

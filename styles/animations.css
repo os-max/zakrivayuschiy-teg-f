@@ -42,7 +42,7 @@
   animation: style-decorator 0.5s ease-in-out alternate infinite;
 }
 
-.like-icon.is-liked .sparkless-heart {
+.like-icon.is-liked .heart {
   transform-origin: center;
   animation: heart-scale 0.3s ease-in 0.1s 2 alternate;
 }
