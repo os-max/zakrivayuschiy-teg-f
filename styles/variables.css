@@ -1,15 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --main-color: #000;
-  --gradient-grid-color: #d3d3d3;
-  --gradient-flow-color-from: #e7e7e7;
-  --gradient-flow-color-to: #1a1a1a;
-  --main-block-background-color: #fff;
-  --button-color: #fff;
-  --main-font-weight: 400;
-  --title-font-weight: 700;
-  --text-shadow-color: #fff;
+  --main-font: Inter, sans-serif;
+  --sub-font: "PressStart2P", fantasy;
   --backdrop-color: #000;
   --heart-color: #f00;
 }

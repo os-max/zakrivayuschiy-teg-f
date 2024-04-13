@@ -15,8 +15,6 @@
   --main-font-weight: 465;
   --title-font-weight: 785;
   --text-shadow-color: #000;
-  --backdrop-color: #000;
-  --heart-color: #f00;
 }
 
 :root.theme-light {
@@ -29,8 +27,6 @@
   --main-font-weight: 400;
   --title-font-weight: 700;
   --text-shadow-color: #fff;
-  --backdrop-color: #000;
-  --heart-color: #f00;
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,8 +41,6 @@
     --main-font-weight: 400;
     --title-font-weight: 700;
     --text-shadow-color: #fff;
-    --backdrop-color: #000;
-    --heart-color: #f00;
   }
 }
 
@@ -62,7 +56,5 @@
     --main-font-weight: 465;
     --title-font-weight: 785;
     --text-shadow-color: #000;
-    --backdrop-color: #000;
-    --heart-color: #f00;
   }
 }

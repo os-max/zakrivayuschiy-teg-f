@@ -13,7 +13,11 @@
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
 
-@keyframes style-decorator {
+@keyframes pointer-animation {
+
+  from {
+    transform: translateX(0);
+  }
 
   to {
     transform: translateX(-4px);
@@ -22,15 +26,31 @@
 
 @keyframes heart-scale {
 
-  to {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
     transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
 @keyframes lighting-sparks {
 
-  100% {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
     opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }
 
@@ -39,16 +59,16 @@
 }
 
 .theme-menu__button[disabled]::before {
-  animation: style-decorator 0.5s ease-in-out alternate infinite;
+  animation: pointer-animation 0.5s ease-in-out alternate infinite;
 }
 
 .like-icon.is-liked .heart {
   transform-origin: center;
-  animation: heart-scale 0.3s ease-in 0.1s 2 alternate;
+  animation: heart-scale 0.3s ease-in 0.1s;
 }
 
 .like-icon.is-liked .sparks {
-  animation: lighting-sparks 0.3s ease-in 0.3s 2 alternate;
+  animation: lighting-sparks 0.3s ease-in 0.3s;
 }
 
 .contour {
@@ -63,22 +83,22 @@
   transition: fill 0.3s linear;
 }
 
-.card__icon-button:hover .core {
+.like-icon:hover .core {
   fill: currentColor;
   transition: fill 0.3s linear;
 }
 
-.card__icon-button:hover .main-body {
+.like-icon:hover .main-body {
   fill: currentColor;
   transition: fill 0.3s linear 0.05s;
 }
 
-.card__icon-button:active .core {
+.like-icon:active .core {
   fill: var(--heart-color);
   transition: fill 0.3s linear;
 }
 
-.card__icon-button:active .main-body {
+.like-icon:active .main-body {
   fill: var(--heart-color);
   transition: fill 0.3s linear 0.05s;
 }
