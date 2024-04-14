@@ -59,7 +59,7 @@
 }
 
 .theme-menu__button[disabled]::before {
-  animation: pointer-animation 0.5s ease-in-out alternate infinite;
+  animation: 0.5s ease-in-out infinite alternate pointer-animation;
 }
 
 .like-icon.is-liked .heart {
